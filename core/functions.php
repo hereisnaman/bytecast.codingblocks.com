@@ -504,6 +504,11 @@ function showPodcastEpisodes($all,$category) {
 					$episodeDate = date ($dateformat, $thisEpisodeDate);
 					$resulting_episodes .= $episodeDate.'</p>';
 
+					////Author
+					$resulting_episodes .= '<p class="episode_author text-info">'
+					$resulting_episodes .= $thisPodcastEpisodeData[6]
+					$resulting_episodes .= '</p>'
+
 					
 					//// Edit/Delete button for logged user (i.e. admin)
 					if (isUserLogged()) { 
@@ -671,6 +676,11 @@ function showSingleEpisode($singleEpisode,$justTitle) {
 					}
 					$episodeDate = date ($dateformat, $thisEpisodeDate);
 					$resulting_episodes .= $episodeDate.'</p>';
+
+					////Author
+					$resulting_episodes .= '<p class="episode_author text-info">'
+					$resulting_episodes .= $thisPodcastEpisodeData[6]
+					$resulting_episodes .= '</p>'
 
 					
 					//// Edit/Delete button for logged user (i.e. admin)
