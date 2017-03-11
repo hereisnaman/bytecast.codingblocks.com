@@ -377,7 +377,7 @@ $theme_file_contents = str_replace("-----PG_MENUARCHIVE-----", $contentmenuarchi
 			$metatagstoreplace .= '
 			<meta property="og:title" content="'.$podcast_title.'"/>
 			<meta property="og:url" content="'.$url.'"/>
-			<meta property="og:image" content="'.$url.$img_dir.'itunes_image.jpg"/>
+			<meta property="og:image" content="'.$url.$img_dir.'bytecast_image.png"/>
 			';
 	
 			// and the canonical link
