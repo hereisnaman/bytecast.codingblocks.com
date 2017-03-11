@@ -1234,8 +1234,8 @@ function generatePodcastFeed ($outputInFile,$category,$manualRegeneration) {
 	else { $feed_url = $url.$feed_dir."feed.xml"; }
 	
 	//iTunes Cover art (jpg or png)
-	if (file_exists($absoluteurl.$img_dir.'itunes_image.jpg')) {
-		$podcastCoverArt = $url.$img_dir.'itunes_image.jpg';
+	if (file_exists($absoluteurl.$img_dir.'bytecast_image.png')) {
+		$podcastCoverArt = $url.$img_dir.'bytecast_image.png';
 	} else if (file_exists($absoluteurl.$img_dir.'itunes_image.png')) {
 		$podcastCoverArt = $url.$img_dir.'itunes_image.png';
 	} else { $podcastCoverArt = ""; }

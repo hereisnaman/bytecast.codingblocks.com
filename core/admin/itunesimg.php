@@ -94,8 +94,8 @@ if(isUserLogged()) {
 
 	else { // if image is not posted open the form
 
-		if (file_exists($absoluteurl.$img_dir.'itunes_image.jpg')) {
-			$podcastCoverArt= $url.$img_dir.'itunes_image.jpg';
+		if (file_exists($absoluteurl.$img_dir.'bytecast_image.png')) {
+			$podcastCoverArt= $url.$img_dir.'bytecast_image.png';
 		} else if (file_exists($absoluteurl.$img_dir.'itunes_image.png')) {
 			$podcastCoverArt= $url.$img_dir.'itunes_image.png';
 		}
