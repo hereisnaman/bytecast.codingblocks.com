@@ -496,7 +496,7 @@ function showPodcastEpisodes($all,$category) {
 					$resulting_episodes .= '</a></h3>';
 
 					////Date
-					$resulting_episodes .= '<p class="episode_date">';
+					$resulting_episodes .= '<p class="episode_date"><small class="text-warning">Date: </small>';
 					$thisEpisodeDate = filemtime($thisPodcastEpisode[1]);
 					if ($thisEpisodeDate > time()) { //if future date
 					$resulting_episodes .= '<i class="fa fa-clock-o fa-2x"></i>  ';	//show watch icon
@@ -505,9 +505,9 @@ function showPodcastEpisodes($all,$category) {
 					$resulting_episodes .= $episodeDate.'</p>';
 
 					////Author
-					$resulting_episodes .= '<p class="episode_author text-info">'
-					$resulting_episodes .= $thisPodcastEpisodeData[6]
-					$resulting_episodes .= '</p>'
+					$resulting_episodes .= '<p class="episode_author text-info"><small class="text-warning">Hosts : </small>';
+					$resulting_episodes .= $thisPodcastEpisodeData[6];
+					$resulting_episodes .= '</p>';
 
 					
 					//// Edit/Delete button for logged user (i.e. admin)
@@ -669,7 +669,7 @@ function showSingleEpisode($singleEpisode,$justTitle) {
 
 
 					////Date
-					$resulting_episodes .= '<p class="episode_date">';
+					$resulting_episodes .= '<p class="episode_date"> <small class="text-warning">Date: </small>';
 					$thisEpisodeDate = filemtime($thisPodcastEpisode[1]);
 					if ($thisEpisodeDate > time()) { //if future date
 					$resulting_episodes .= '<i class="fa fa-clock-o fa-2x"></i>  ';	//show watch icon
@@ -678,9 +678,9 @@ function showSingleEpisode($singleEpisode,$justTitle) {
 					$resulting_episodes .= $episodeDate.'</p>';
 
 					////Author
-					$resulting_episodes .= '<p class="episode_author text-info">'
-					$resulting_episodes .= $thisPodcastEpisodeData[6]
-					$resulting_episodes .= '</p>'
+					$resulting_episodes .= '<p class="episode_author text-info"> <small class="text-warning">Hosts: </small>';
+					$resulting_episodes .= $thisPodcastEpisodeData[6];
+					$resulting_episodes .= '</p>';
 
 					
 					//// Edit/Delete button for logged user (i.e. admin)
