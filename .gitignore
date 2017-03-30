@@ -20,3 +20,13 @@ images/*
 !images/itunes_image.jpg
 
 !images/smiley_default_freebox.png
+.idea/
+
+*.iws
+/out/
+.idea_modules/
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
