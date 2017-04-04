@@ -970,7 +970,7 @@ function detectModernBrowser()
 {
 	
 	$supportHTML5audioTag = array("msie","firefox","chrome","safari");
-	$supportHTML5videoTag = array("msie","chrome","safari"); //firefox does not fully support mp4 videos yet
+	$supportHTML5videoTag = array("msie","firefox", "chrome","safari"); //firefox does not fully support mp4 videos yet
 	
 	//for each browser, which is the minimum required version that supports HTML5 audio and video tags
 	$minumumRequiredVersion = array(
@@ -1074,14 +1074,6 @@ function showStreamingPlayers($filenameWithoutExtension,$podcast_filetype,$url,$
 
 		}
 
-		if ($browserAudioVideoSupport[0] == TRUE AND $podcast_filetype=="mp4") { //if browser supports HTML5
-			$showplayercode =	'<video style="width:80%;" controls>
-				  <source src="'.$upload_dir.$filenameWithoutExtension.'.mp4" type="video/mp4">
-				'._("Your browser does not support the video player").'
-				</video>';
-			$playersOutput .= ''.$showplayercode.'<br />';
-
-		}
 		// Flash Player disabled from version 2.5
 		/* 
 		else { //if no support for HTML5, then flash player just for mp3
@@ -1101,7 +1093,7 @@ function showStreamingPlayers($filenameWithoutExtension,$podcast_filetype,$url,$
 		if (isItAvideo($podcast_filetype) == TRUE AND $browserAudioVideoSupport[1] == TRUE) {
 
 		$playersOutput .= '<video width="85%" id="videoPlayer'.$recent_count.'" style="display:none;" controls preload="none">
-		  <source src="'.$upload_dir.$filenameWithoutExtension.'.'.$podcast_filetype.'" type="video/mp4">
+		  <source src="'.$url.$upload_dir.$filenameWithoutExtension.'.'.$podcast_filetype.'" type="video/mp4">
 		'._("Your browser does not support the video player").'
 		</video>';
 
