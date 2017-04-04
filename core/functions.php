@@ -1075,7 +1075,7 @@ function showStreamingPlayers($filenameWithoutExtension,$podcast_filetype,$url,$
 		}
 
 		if ($browserAudioVideoSupport[0] == TRUE AND $podcast_filetype=="mp4") { //if browser supports HTML5
-			$showplayercode =	'<video style="width:80%;" controls preload="metadata">
+			$showplayercode =	'<video style="width:80%;" controls>
 				  <source src="'.$url.$upload_dir.$filenameWithoutExtension.'.mp4" type="video/mp4">
 				'._("Your browser does not support the video player").'
 				</video>';
