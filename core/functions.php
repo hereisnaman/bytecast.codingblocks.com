@@ -1067,7 +1067,7 @@ function showStreamingPlayers($filenameWithoutExtension,$podcast_filetype,$url,$
 	//// AUDIO PLAYER (MP3)
 		if ($browserAudioVideoSupport[0] == TRUE AND $podcast_filetype=="mp3") { //if browser supports HTML5
 		$showplayercode =	'<audio style="width:80%;" controls preload="none">
-			  <source src="'.$url.$upload_dir.$filenameWithoutExtension.'.mp3" type="audio/mpeg">
+			  <source src="'.$upload_dir.$filenameWithoutExtension.'.mp3" type="audio/mpeg">
 			'._("Your browser does not support the audio player").'
 			</audio>';
 			$playersOutput .= ''.$showplayercode.'<br />'; 
@@ -1076,7 +1076,7 @@ function showStreamingPlayers($filenameWithoutExtension,$podcast_filetype,$url,$
 
 		if ($browserAudioVideoSupport[0] == TRUE AND $podcast_filetype=="mp4") { //if browser supports HTML5
 			$showplayercode =	'<video style="width:80%;" controls>
-				  <source src="'.$url.$upload_dir.$filenameWithoutExtension.'.mp4" type="video/mp4">
+				  <source src="'.$upload_dir.$filenameWithoutExtension.'.mp4" type="video/mp4">
 				'._("Your browser does not support the video player").'
 				</video>';
 			$playersOutput .= ''.$showplayercode.'<br />';
@@ -1101,7 +1101,7 @@ function showStreamingPlayers($filenameWithoutExtension,$podcast_filetype,$url,$
 		if (isItAvideo($podcast_filetype) == TRUE AND $browserAudioVideoSupport[1] == TRUE) {
 
 		$playersOutput .= '<video width="85%" id="videoPlayer'.$recent_count.'" style="display:none;" controls preload="none">
-		  <source src="'.$url.$upload_dir.$filenameWithoutExtension.'.'.$podcast_filetype.'" type="video/mp4">
+		  <source src="'.$upload_dir.$filenameWithoutExtension.'.'.$podcast_filetype.'" type="video/mp4">
 		'._("Your browser does not support the video player").'
 		</video>';
 
