@@ -1027,7 +1027,7 @@ function showButtons($filenameWithoutExtension,$podcast_filetype,$url,$upload_di
 	$browserAudioVideoSupport = detectModernBrowser();
 	if ($enablestreaming == "yes" AND isItAvideo($podcast_filetype) == TRUE AND $browserAudioVideoSupport[1] == TRUE AND !detectMobileDevice()) {
 	//javascript:; is added as an empty link for href
-	$buttonsOutput .= '<a href="javascript:;" class="btn btn-default"  onclick="$(\'#videoPlayer'.$recent_count.'\').fadeToggle();$(this).css(\'font-weight\',\'bold\');"><i class="fa fa-youtube-play"></i> '._("Watch").'</a>&nbsp;&nbsp;';
+	$buttonsOutput .= '<a href="javascript:;" class="btn btn-default"  onclick="$(\'#videoPlayer'.$recent_count.'\').fadeToggle();$(this).css(\'font-weight\',\'bold\');$(\'#videoPlayer'.$recent_count.'\').get(0).play();"><i class="fa fa-youtube-play"></i> '._("Watch").'</a>&nbsp;&nbsp;';
 	}
 	
 	//// Button download
